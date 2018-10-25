@@ -9,7 +9,7 @@
 #    -e 's:\(* \)\(\(.*/\)\([^/]\+\)\):\1[\4](\2):g')
 
 tree=$(tree -L 2 -tf --noreport --charset ascii -H . |
-       sed -e 's/[|`]-\+/ \&#8227;/g' \
-       -e 's/| \+/ \&nbsp; /g')
+       sed -e 's/[|`]-\+/ &#186;/g' \
+       -e 's/| \+/ \&nbsp;\&nbsp; /g')
 
 printf"${tree}"
